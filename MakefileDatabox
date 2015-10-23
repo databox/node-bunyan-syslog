@@ -10,5 +10,5 @@ run:
 		-h node \
 		-v `pwd`/./:/home/app/x \
 		--rm -ti $(IMAGE_NAME)  \
-		bash -lc "cd /home/app/x/databox ; npm install -d && node databox.test.js"
+		bash -lc "cd /home/app/x/databox ; npm install --allow-root && node databox.test.js"
 
