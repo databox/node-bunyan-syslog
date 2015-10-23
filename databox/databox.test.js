@@ -2,6 +2,7 @@ var bunyan = require('bunyan');
 var bsyslog = require('bunyan-syslog');
 
 var syslogHost = process.env.RSYSLOG_HOST || "10.240.58.73";
+syslogHost = "10.240.0.4";
 
 var logger = function (name) {
     return bunyan.createLogger({
@@ -29,8 +30,6 @@ var logger = function (name) {
     });
 };
 
-// module.exports = logger;
-
 var t = logger('testing');
 
 t.info("Message sent to info");
@@ -45,7 +44,4 @@ console.log("---");
 t.info({number: 42, id: 11, test: "Demo"}, "Message sent to info");
 console.log("---");
 
-// process.exit(1);
-
-// t.info({name: "John", lastName: "Smith", value: "XXXX"});
-// t.info({x: "Done", number: 123123, value: "XXXX"}, "Another test XXXX");
+process.exit(0);
