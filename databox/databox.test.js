@@ -33,7 +33,17 @@ var logger = function (name) {
 
 var t = logger('testing');
 
-t.info("XXXX This is test");
+t.info("Message sent to info");
+console.log("---");
+
+t.error(new Error("This is error"));
+console.log("---");
+
+t.debug("To je debug");
+console.log("---");
+
+t.info({number: 42, id: 11, test: "Demo"}, "Message sent to info");
+console.log("---");
 
 // process.exit(1);
 
