@@ -44,4 +44,4 @@ console.log("---");
 t.info({number: 42, id: 11, test: "Demo"}, "Message sent to info");
 console.log("---");
 
-process.exit(0);
+// process.exit(0);
