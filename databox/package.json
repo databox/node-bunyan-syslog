@@ -1,0 +1,13 @@
+{
+  "name": "bunyan-syslog-databox",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcavage/node-bunyan-syslog.git"
+  },
+  "dependencies": {
+    "bunyan-syslog": "git+https://git@github.com/databox/node-bunyan-syslog.git",
+    "bunyan": "*"
+  },
+  "devDependencies": {
+  }
+}

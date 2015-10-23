@@ -1,0 +1,14 @@
+.PHONY: build run
+
+IMAGE_NAME=node-bunyan-syslog
+
+build:
+	docker build --rm=true -t $(IMAGE_NAME) .
+
+run:
+	docker run \
+		-h node \
+		-v `pwd`/./:/home/app/x \
+		--rm -ti $(IMAGE_NAME)  \
+		bash -lc "cd /home/app/x/databox ; npm install -d && node databox.test.js"
+
